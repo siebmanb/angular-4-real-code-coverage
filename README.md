@@ -1,7 +1,9 @@
 # Real code coverage in Angular 4
 ### Introduction
 > You: Yay my code is covered at 100% with my test suite!
+
 > Me: Really? You don't have a test file executing code from another file and giving you the impression of cover?
+
 > Damn, you are right, what can I do?
 
 ### Example
@@ -30,8 +32,11 @@ The given python script isolates each TS file, run a test coverage by executing 
 
 ### How to use
 Copy the python script in the app root folder and run `python script.py`.
+
 Files containing `fdescribe`,`xdescribe`,`fit` and `xit` will be ignored. 
+
 You should probably do as much testing as possible and get close to 100% with the classic code coverage from Angular CLI.
+
 If script fails midway, you might end up with files being modified and not rollbacked. Make sure to cancel the modifications and not commit them.
 
 
