@@ -54,6 +54,9 @@ Tested with :
   - accept a file path as a parameter
   - improve step that removes ../ from stylesheets path
   - accept files with existing `fdescribe`,`xdescribe`,`fit` and `xit`
+  
+### Disclaimer
+This still ain't a real test coverage, because there is no way to know if an executed line has been really tested, but at least there is no more side-effects from other files!
 
 ### License
 MIT
