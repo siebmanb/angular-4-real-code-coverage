@@ -4,7 +4,7 @@
 
 > Me: Really? You don't have a test file executing code from another file and giving you the impression of cover?
 
-> Damn, you are right, what can I do?
+> You: Damn, you are right, what can I do?
 
 ### Example
 Let's have a look at an example.
@@ -24,7 +24,7 @@ function B() {
 A()
 B()
 ```
-There are two files `a.ts` and `b.ts`, with a spec file `b.spec.ts`. The test file is testing methods from `b.ts` but happen to call methods from `a.ts`.
+There are two files `a.ts` and `b.ts`, with a spec file `b.spec.ts`. The test file is testing methods from `b.ts` but happens to call methods from `a.ts`.
 Oh miracle you end up with 100% coverage on `a.ts` and `b.ts` even though you did not test method `A`!!!
 
 ### Solution
@@ -34,6 +34,8 @@ The given python script isolates each TS file, run a test coverage by executing 
 Copy the python script in the app root folder and run `python script.py`.
 
 Files containing `fdescribe`,`xdescribe`,`fit` and `xit` will be ignored. 
+
+Adjust `hundredPercentCount` to decide when a file is considered as tested. There are 4 counters of cover for each file: statements, branches, functions and lines.
 
 You should probably do as much testing as possible and get close to 100% with the classic code coverage from Angular CLI.
 
