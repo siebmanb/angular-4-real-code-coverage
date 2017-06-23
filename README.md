@@ -49,6 +49,11 @@ Tested with :
   - typescript 2.2.2
   - jasmine 2.5.2
   - karma 1.2.0
+  
+### Next step
+  - accept a file path as a parameter
+  - improve step that removes ../ from stylesheets path
+  - accept files with existing `fdescribe`,`xdescribe`,`fit` and `xit`
 
 ### License
 MIT
