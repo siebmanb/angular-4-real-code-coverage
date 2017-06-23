@@ -1,2 +1,47 @@
-# angular-4-real-code-coverage
-# angular-4-real-code-coverage
+# Real code coverage in Angular 4
+### Introduction
+> You: Yay my code is covered at 100% with my test suite!
+> Me: Really? You don't have a test file executing code from another file and giving you the impression of cover?
+> Damn, you are right, what can I do?
+
+### Example
+Let's have a look at an example.
+
+```ts
+<file a.ts>
+function A() {
+}
+```
+```ts
+<file b.ts>
+function B() {
+}
+```
+```ts
+<file b.spec.ts>
+A()
+B()
+```
+There are two files `a.ts` and `b.ts`, with a spec file `b.spec.ts`. The test file is testing methods from `b.ts` but happen to call methods from `a.ts`.
+Oh miracle you end up with 100% coverage on `a.ts` and `b.ts` even though you did not test method `A`!!!
+
+### Solution
+The given python script isolates each TS file, run a test coverage by executing only the TS spec file associated with it, and extract the coverage for this TS file only. In other words, the script makes sure a spec file only affect coverage of its associated TS file.
+
+### How to use
+Copy the python script in the app root folder and run `python script.py`.
+Files containing `fdescribe`,`xdescribe`,`fit` and `xit` will be ignored. 
+You should probably do as much testing as possible and get close to 100% with the classic code coverage from Angular CLI.
+If script fails midway, you might end up with files being modified and not rollbacked. Make sure to cancel the modifications and not commit them.
+
+
+### Context
+Tested with :
+  - angular 4.0.3
+  - angular CLI 1.0.1
+  - typescript 2.2.2
+  - jasmine 2.5.2
+  - karma 1.2.0
+
+### License
+MIT
