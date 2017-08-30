@@ -31,6 +31,8 @@ Copy the python script in the app root folder and run `python script.py`.
 
 Files containing `fdescribe`,`xdescribe`,`fit` and `xit` will be ignored. 
 
+Results will be in a `results` folder at the root level.
+
 Adjust `hundredPercentCount` to decide when a file is considered as tested. There are 4 counters of cover for each file: statements, branches, functions and lines.
 
 You should probably do as much testing as possible and get close to 100% with the classic code coverage from Angular CLI.
