@@ -1,4 +1,7 @@
 # Real code coverage in Angular 4
+
+Note: code is not maintained since August 2017
+
 ### Introduction
 When I started testing Angular 4 code with .spec.ts files, I quickly realized something: even though I was not doing integration tests, my tests were overlapping (see example below). I made it a mission to reach 100% test coverage without overlap. This script allows to find untested code when overlap is disabled.
 
